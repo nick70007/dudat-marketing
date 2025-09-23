@@ -44,18 +44,18 @@ export function PartnerSlick() {
   return (
     <div className="w-full bg-black mx-auto mt-10">
       <Slider {...settings}>
-        <div><img src="src/assets/images/partner/dennys.png" alt="slide1" /></div>
-        <div><img src="src/assets/images/partner/hurricane.jpg" alt="slide2" /></div>
-        <div><img src="src/assets/images/partner/rremc.png" alt="slide3" /></div>
-        <div><img src="src/assets/images/partner/wahoo.png" alt="slide4" /></div>
-        <div><img src="src/assets/images/partner/woodlands.png" alt="slide5" /></div>
-        <div><img src="src/assets/images/partner/ziosk.png" alt="slide6" /></div>
-        <div><img src="src/assets/images/partner/dennys.png" alt="slide1" /></div>
-        <div><img src="src/assets/images/partner/hurricane.jpg" alt="slide2" /></div>
-        <div><img src="src/assets/images/partner/rremc.png" alt="slide3" /></div>
-        <div><img src="src/assets/images/partner/wahoo.png" alt="slide4" /></div>
-        <div><img src="src/assets/images/partner/woodlands.png" alt="slide5" /></div>
-        <div><img src="src/assets/images/partner/ziosk.png" alt="slide6" /></div>
+        <div><img src="/assets/images/partner/dennys.png" alt="slide1" /></div>
+        <div><img src="/assets/images/partner/hurricane.jpg" alt="slide2" /></div>
+        <div><img src="/assets/images/partner/rremc.png" alt="slide3" /></div>
+        <div><img src="/assets/images/partner/wahoo.png" alt="slide4" /></div>
+        <div><img src="/assets/images/partner/woodlands.png" alt="slide5" /></div>
+        <div><img src="/assets/images/partner/ziosk.png" alt="slide6" /></div>
+        <div><img src="/assets/images/partner/dennys.png" alt="slide1" /></div>
+        <div><img src="/assets/images/partner/hurricane.jpg" alt="slide2" /></div>
+        <div><img src="/assets/images/partner/rremc.png" alt="slide3" /></div>
+        <div><img src="/assets/images/partner/wahoo.png" alt="slide4" /></div>
+        <div><img src="/assets/images/partner/woodlands.png" alt="slide5" /></div>
+        <div><img src="/assets/images/partner/ziosk.png" alt="slide6" /></div>
       </Slider>
     </div>
   );

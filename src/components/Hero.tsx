@@ -81,7 +81,7 @@ export function Hero() {
                   autoPlay
                   muted
                 >
-                    <source src="src/assets/images/hero.mp4" type="video/mp4" />
+                    <source src="/assets/images/hero.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
