@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -10,34 +9,8 @@ import { CALENDLY_30MIN, serviceTitles } from '../lib/constants';
 import { slugify } from '../utils/slugify';
 
 export function Contact() {
-
-  const [result, setResult] = React.useState("");
-
-  const onSubmit = async (event:any) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "62fd56c8-1052-4e8c-9c60-4cd29fe445be");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-    }
-  };
-
   return (
-    <section id="contact" className="py-20 bg-background pt-0">
+    <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -55,71 +28,68 @@ export function Contact() {
               <CardHeader>
                 <CardTitle>Send us a message</CardTitle>
               </CardHeader>
-              <form onSubmit={onSubmit}>
-                <CardContent className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name *</Label>
-                        <Input name="firstName" id="firstName" placeholder="John" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name *</Label>
-                        <Input name="lastName" id="lastName" placeholder="Doe" />
-                      </div>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input name="email" id="email" type="email" placeholder="john@example.com" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone</Label>
-                        <Input name="phone" id="phone" type="tel" placeholder="+1 (214) 505-0184" />
-                      </div>
-                    </div>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">First Name *</Label>
+                    <Input id="firstName" placeholder="John" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Input id="lastName" placeholder="Doe" />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <Input id="email" type="email" placeholder="john@example.com" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input id="phone" type="tel" placeholder="+1 (214) 505-0184" />
+                  </div>
+                </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="company">Company</Label>
-                      <Input name="companyName" id="companyName" placeholder="Your Company Name" />
-                    </div>
+                <div className="space-y-2">
+                  <Label htmlFor="company">Company</Label>
+                  <Input id="company" placeholder="Your Company Name" />
+                </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="service">Service Interested In *</Label>
-                      <Select name="service" id="service">
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {serviceTitles.map(title => (
-                            <SelectItem key={title} value={slugify(title)}>
-                              {title}
-                            </SelectItem>
-                          ))}
-                          <SelectItem value="multiple">Multiple Services</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                <div className="space-y-2">
+                  <Label htmlFor="service">Service Interested In *</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a service" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {serviceTitles.map(title => (
+                        <SelectItem key={title} value={slugify(title)}>
+                          {title}
+                        </SelectItem>
+                      ))}
+                      <SelectItem value="multiple">Multiple Services</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message *</Label>
-                      <Textarea 
-                        name="message"
-                        id="message" 
-                        placeholder="Tell us about your project, goals, and how we can help..."
-                        rows={4}
-                      />
-                    </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message *</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Tell us about your project, goals, and how we can help..."
+                    rows={4}
+                  />
+                </div>
 
-                    <Button type="submit" size="lg" className="w-full bg-white text-black hover:bg-gray-100 shadow-lg border border-gray-300">
-                      Send Message
-                    </Button>
-                  <p className="text-sm text-muted-foreground text-center">
-                    We'll get back to you within 24 hours.
-                  </p>
-                  <span>{result}</span>
-                </CardContent>
-              </form>
+                <Button size="lg" className="w-full bg-white text-black hover:bg-gray-100 shadow-lg border border-gray-300">
+                  Send Message
+                </Button>
+                
+                <p className="text-sm text-muted-foreground text-center">
+                  We'll get back to you within 24 hours.
+                </p>
+              </CardContent>
             </Card>
           </div>
 
@@ -143,7 +113,7 @@ export function Contact() {
                     <h4 className="font-semibold text-foreground mb-1">Email</h4>
                     <a 
                       href="mailto:duda@dudat.marketing" 
-                      className="text-muted-foreground text-sm hover:text-primary transition-colors underline"
+                      className="text-muted-foreground text-sm hover:text-primary transition-colors"
                     >
                       duda@dudat.marketing
                     </a>

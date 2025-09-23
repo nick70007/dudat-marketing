@@ -1,7 +1,5 @@
 import { Navigation } from './components/Navigation';
-import Preloader from "./components/Preloader";
 import { Hero } from './components/Hero';
-import { PartnerSlick } from "./components/PartnerSlick";
 import { Services } from './components/Services';
 import { PortfolioTestimonials } from './components/PortfolioTestimonials';
 import { Team } from './components/Team';
@@ -11,10 +9,8 @@ import { Footer } from './components/Footer';
 export default function App() {
   return (
     <div className="min-h-screen dark">
-      {/* <Preloader /> */}
       <Navigation />
       <section id="hero"><Hero /></section>
-      <section id="partner" className="overflow-hidden"><PartnerSlick /></section>
       <section id="services"><Services /></section>
       <section id="portfolio"><PortfolioTestimonials /></section>
       <section id="team"><Team /></section>

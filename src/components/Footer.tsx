@@ -47,7 +47,7 @@ export function Footer() {
                   <Mail className="h-4 w-4 flex-shrink-0" />
                   <a 
                     href="mailto:duda@dudat.marketing" 
-                    className="text-sm hover:text-black/60 transition-colors underline"
+                    className="text-sm hover:text-black/60 transition-colors"
                   >
                     duda@dudat.marketing
                   </a>
