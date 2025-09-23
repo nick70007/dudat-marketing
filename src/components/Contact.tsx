@@ -81,7 +81,7 @@ export function Contact() {
 
                     <div className="space-y-2">
                       <Label htmlFor="company">Company</Label>
-                      <Input name="company" id="company" placeholder="Your Company Name" />
+                      <Input name="companyName" id="companyName" placeholder="Your Company Name" />
                     </div>
 
                     <div className="space-y-2">
