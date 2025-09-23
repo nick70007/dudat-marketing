@@ -60,22 +60,22 @@ export function Contact() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="firstName">First Name *</Label>
-                        <Input id="firstName" placeholder="John" />
+                        <Input name="firstName" id="firstName" placeholder="John" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName">Last Name *</Label>
-                        <Input id="lastName" placeholder="Doe" />
+                        <Input name="lastName" id="lastName" placeholder="Doe" />
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="email">Email *</Label>
-                        <Input id="email" type="email" placeholder="john@example.com" />
+                        <Input name="email" id="email" type="email" placeholder="john@example.com" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="phone">Phone</Label>
-                        <Input id="phone" type="tel" placeholder="+1 (214) 505-0184" />
+                        <Input name="phone" id="phone" type="tel" placeholder="+1 (214) 505-0184" />
                       </div>
                     </div>
 
@@ -104,6 +104,7 @@ export function Contact() {
                     <div className="space-y-2">
                       <Label htmlFor="message">Message *</Label>
                       <Textarea 
+                        name="message"
                         id="message" 
                         placeholder="Tell us about your project, goals, and how we can help..."
                         rows={4}
