@@ -2,7 +2,7 @@ import { Button } from './ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { motion } from 'motion/react';
 import squareLogo from 'figma:asset/551290197c7d8f736bf98797787e866203fd26d9.png';
-import heroLogo from '../assets/images/hero.mp4';
+import heroLogo from '../assets/images/hero.gif';
 import { CALENDLY_30MIN } from '../lib/constants';
 
 export function Hero() {
@@ -73,18 +73,18 @@ export function Hero() {
           <div className="mt-12 lg:mt-0 lg:col-span-6 hero-right">
             <div className="relative h-[400px] lg:h-[500px] flex items-center justify-center">
               <div className="w-[26rem] h-[26rem] lg:w-[32rem] lg:h-[32rem] flex w-full">
-                {/* <img 
-                  src="src/assets/images/hero.gif"
+                <img 
+                  src={heroLogo}
                   alt="DUDAT Sales & Marketing" 
                   className="w-full h-full object-contain rounded-2xl shadow-2xl"
-                /> */}
-                <video
-                  autoPlay
-                  muted
-                  playsInline
+                />
+                {/* <video
+                  autoPlay 
+                  muted 
+                  playsInline 
                 >
                     <source src={heroLogo} type="video/mp4" />
-                </video>
+                </video> */}
               </div>
             </div>
           </div>
