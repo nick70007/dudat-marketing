@@ -60,18 +60,18 @@ export function Contact() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="firstName">First Name *</Label>
-                        <Input name="firstName" id="firstName" placeholder="John" />
+                        <Input name="firstName" id="firstName" placeholder="John" required />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName">Last Name *</Label>
-                        <Input name="lastName" id="lastName" placeholder="Doe" />
+                        <Input name="lastName" id="lastName" placeholder="Doe" required />
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="email">Email *</Label>
-                        <Input name="email" id="email" type="email" placeholder="john@example.com" />
+                        <Input name="email" id="email" type="email" placeholder="john@example.com" required />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="phone">Phone</Label>
@@ -86,7 +86,7 @@ export function Contact() {
 
                     <div className="space-y-2">
                       <Label htmlFor="service">Service Interested In *</Label>
-                      <Select name="services" id="services">
+                      <Select name="services" id="services" required>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
@@ -108,6 +108,7 @@ export function Contact() {
                         id="message" 
                         placeholder="Tell us about your project, goals, and how we can help..."
                         rows={4}
+                        required
                       />
                     </div>
 
