@@ -81,6 +81,7 @@ export function Hero() {
                 <video
                   autoPlay
                   muted
+                  playsInline
                 >
                     <source src={heroLogo} type="video/mp4" />
                 </video>
